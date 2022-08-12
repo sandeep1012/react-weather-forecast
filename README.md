@@ -14,13 +14,8 @@ http://weatherforecast.makeindiaunitech.com/
 git clone
 cd react-weather-forecast
 npm i
-```
 
-
-## Start the dev server
-```
-npm run start:dev
-
+npm start
 ```
 
 ## Build
