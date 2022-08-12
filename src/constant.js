@@ -1,0 +1,11 @@
+const ACTIONS={
+    LOADING_SEARCH_WEATHER:'LOADING_SEARCH_WEATHER',
+    SEARCH_WEATHER:'SEARCH_WEATHER',
+    SEARCH_ERROR: 'SEARCH_ERROR'
+}
+
+const API_KEY = '50959b09e378b3cf5107c64d1a56612c'
+
+const API_URL='https://api.openweathermap.org/data/2.5/forecast'
+
+export {ACTIONS, API_KEY, API_URL}
