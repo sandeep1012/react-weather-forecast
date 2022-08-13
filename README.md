@@ -19,7 +19,7 @@ npm i
 
 ## Start the dev server
 ```
-npm run start
+npm start
 
 ```
 
@@ -35,9 +35,9 @@ npm run test
 
 ```
 
-#### Notes:
-* Unit testing can be done manually by executing the above command.
-* It will be done automatically prior committing the updates to the repo as a pre-commit hook.
+### Notes:
+* Unit testing is done by using react testing library
+* Also, manual testing can be done as per the requirement
 
 ### Highlight
 - [ ] Provided an option for user to enter city and search 5 days weather forecast.
