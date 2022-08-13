@@ -27,13 +27,14 @@ export const searchWeatherInfo = (city) => {
                     return {
                         id: i.toString(),
                         icon: `https://openweathermap.org/img/wn/${info.weather[0].icon}@2x.png`,
-                        min: Math.round(info.main.temp_min, 0),
-                        max: Math.round(info.main.temp_max, 0),
-                        temp: Math.round(info.main.temp),
+                        min: 'Min: ' + Math.round(info.main.temp_min, 0) + ' °',
+                        max: 'Max: ' + Math.round(info.main.temp_max, 0) + ' °',
+                        temp: Math.round(info.main.temp) +'°C',
                         weatherType: info.weather[0].description,
                         weekDay: weekDays[newDate.getDay()],
                         dateTime: new Intl.DateTimeFormat('en-US', B_Options).format(newDate),
-                        humidity: info.main.humidity
+                        humidity: info.main.humidity+' %',
+                        wind: info.wind.speed +' m/s'
                     } 
                 })
 
