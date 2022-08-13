@@ -1,7 +1,7 @@
 ![logo](https://image.ibb.co/g69ZDx/682111_cloud_512x512.png)
 
 # 5-Day Weather Forecast
-A simple application to display 5-day weather forecast using OpenWeatherMap API.
+A simple application to display 5-day weather forecast using OpenWeatherMap API. Built on top of [create-react-app Starter Kit](https://github.com/facebook/create-react-app)
 
 ### Demo
 http://weatherforecast.makeindiaunitech.com/
@@ -11,11 +11,16 @@ http://weatherforecast.makeindiaunitech.com/
 
 ## Run
 ```
-git clone
+git clone https://github.com/sandeep1012/react-weather-forecast
 cd react-weather-forecast
 npm i
 
-npm start
+``` 
+
+## Start the dev server
+```
+npm run start
+
 ```
 
 ## Build
@@ -24,23 +29,34 @@ npm run build
 
 ```
 
+## Test
+```
+npm run test
+
+```
+
 #### Notes:
 * Unit testing can be done manually by executing the above command.
 * It will be done automatically prior committing the updates to the repo as a pre-commit hook.
 
-### Functionalities
-- [ ] Provide an option for user to enter city and search 5 days weather forecast.
+### Highlight
+- [ ] Provided an option for user to enter city and search 5 days weather forecast.
 - [ ] Have used proper loading spinner icon on search click.
-- [ ] Proper validations for emply text field and incorrect city is done
-- [ ] Better and more functional UI
+- [ ] Proper validations for emply text field and incorrect city is done.
+- [ ] Responsive UI with bootstrap and custom CSS for best user experience.
+- [ ] Have used redux store for centralised data storage.
+- [ ] Have used Thunk as a middleware.
+- [ ] Have used functional components with hooks.
 
 ### Tech Stack
 
+* JavaScript (ES6)
+* HTML
+* CSS
 * React.js
 * Redux
-* JavaScript (ES6)
-* HTML5
 * Redux Thunk
+* Bootstrap
 
 #### The MIT License (MIT)
 MIT © 2022 Sandeep Patel

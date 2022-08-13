@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { connect } from 'react-redux'
 import { searchWeatherInfo } from '../actions/weatherActions'
-//import bgImg from '../assets/bg.jpg'
+import bgImg from '../assets/bg.jpg'
 
 const SearchCity = (props) => {
     //console.log('Search', props);
@@ -17,7 +17,7 @@ const SearchCity = (props) => {
         } else {
             setCityEmpty(true)
         }
-        
+
     }
 
     // function onCityChange(e){
@@ -27,25 +27,28 @@ const SearchCity = (props) => {
     //         setCityEmpty(true)
     //     }
     // }
-    //style={{backgroundImage: `url(${bgImg})`, backgroundRepeat:'round'}}
 
-    return <div className=''>
-        <div className='h-100 p-5 text-bg-light rounded-3 img-responsive' >
-            
-            <div className="d-inline"><input type="text" className=" d-inline" disabled={props.isLoading} placeholder="City" ref={city} /></div>
-            <div className="d-inline m-2"><button type="button" className="btn btn-primary d-inline" disabled={props.isLoading} onClick={searchCity}>Search</button></div>
-            {cityEmpty ? <div className='bg-light text-danger'>Enter city to search</div> : null}
-            <h1>5-Day Weather Forecast</h1>
 
-            {
-                props.isLoading ? <div className="spinner-border text-primary" role="status"></div> :
-                    <div className="display-6 text-secondary font-weight-bold">{props.location}</div>
-            }
-            {props.hasError ? <div className="alert alert-danger" role="alert">
+    return <>
+        <div data-testid="citySearchSection" className='h-100 p-5 text-bg-light mb-2' style={{ backgroundImage: `url(${bgImg})`, backgroundRepeat: 'round' }}>
+            <h1 className='text-white-bb'>5-Day Weather Forecast</h1>
+            <div className='offset-md-4 col-md-4'>
+                <input type="text" className="form-control" disabled={props.isLoading} name="City" placeholder="Enter City" ref={city} />
+            </div>
+            {cityEmpty ? <div className='bg-light text-danger offset-md-4 col-md-4'>Enter city to search</div> : null}
+            <div className='offset-md-4 col-md-4 mt-2'>
+                <button type="button" className="btn btn-dark form-control" name="Search" disabled={props.isLoading} onClick={searchCity}>Search</button>
+            </div>
+
+            {props.hasError ? <div className="alert alert-danger mt-2">
                 {props.errorMessage}
             </div> : null}
         </div>
-    </div>
+        {
+            props.isLoading ? <div className="spinner-border text-primary"></div> :
+                <div className="display-6 text-primary fw-bolder">{props.location}</div>
+        }
+    </>
 }
 
 const mapStateToProps = (state) => {

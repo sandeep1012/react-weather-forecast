@@ -5,10 +5,9 @@ import { Provider } from "react-redux"
 import weatherStore from './store/store'
 
 export const App = () => {
-
   return (
     <Provider store={weatherStore}>
-      <div className="container text-center">
+      <div className="text-center">       
         <SearchCity />
         <WeatherList />
       </div>
